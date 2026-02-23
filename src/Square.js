@@ -1,11 +1,14 @@
 
-const Square=({colorValue})=> {
+const Square=({colorValue,hexValue,isDarkText})=> {
     return (
         <section 
         className="square"
-        style={{backgroundColor:colorValue}}
+        style={{
+            backgroundColor:colorValue,
+            color:isDarkText?"black":"white"}}
         >
-            <p>{colorValue ? colorValue:"Empty value"}</p>
+            <p>{colorValue ? colorValue:"No Color present! "}</p>
+            <p>{hexValue ? hexValue:null}</p>
         </section>
     )
 }

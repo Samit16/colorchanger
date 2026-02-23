@@ -4,13 +4,23 @@ import Input from './Input';
 
 function App() {
   const [colorValue, setColorvalue] = useState("");
-
+  const [hexValue, setHexValue] = useState("");
+  const [isDarkText, setIsDarkText] = useState(true);
   return (
     <div className="App">
-      <Square colorValue={colorValue}/>
+      <Square 
+      colorValue={colorValue}
+      hexValue= {hexValue}
+      isDarkText={isDarkText}
+      />
+      
       <Input 
         colorValue={colorValue} 
-        setColorValue={setColorvalue}/>
+        setColorValue={setColorvalue}
+        setHexValue={setHexValue}
+        isDarkText={isDarkText}
+        setIsDarkText={setIsDarkText}
+        />
     </div>
   );
 }
